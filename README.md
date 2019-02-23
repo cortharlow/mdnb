@@ -1,6 +1,12 @@
-# Mdnb
+# Markdown Notebook
+
+A modern MEAN application using Angular 7 and Angular Material 2.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+
+---
+
+Default README content:
 
 ## Development server
 
