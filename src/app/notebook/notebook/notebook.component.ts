@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoteService } from '../../core/note.service';
 
 @Component({
   selector: 'notebook',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NotebookComponent implements OnInit {
-  constructor() {
-
-  }
+  constructor(
+    private noteService: NoteService
+  ) { }
 
   ngOnInit() {
     console.log('Notebook');
+
+    this.noteService.getNotes().subscribe(response => {
+      console.log(response);
+    })
   }
-  
+
 }
