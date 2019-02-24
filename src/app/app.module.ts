@@ -10,12 +10,17 @@ import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app/app.component';
 import { LandingPageComponent } from './landing/landing-page.component';
-import { NotebookComponent } from './notebook';
+import { NoteComponent, NotebookComponent } from './notebook';
+
+// Angular Material imports
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
+    NoteComponent,
     NotebookComponent
   ],
   imports: [
@@ -23,7 +28,10 @@ import { NotebookComponent } from './notebook';
     BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+
+    //Angular Material
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

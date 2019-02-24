@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteService } from '../../core/note.service';
+import { Note, NoteService } from '../../core/note.service';
 
 @Component({
-  selector: 'notebook',
+  selector: 'notebook-component',
   templateUrl: './notebook.component.html',
   styleUrls: ['./notebook.component.scss']
 })
 
 export class NotebookComponent implements OnInit {
+  notes: Note[] = [];
+
   constructor(
     private noteService: NoteService
   ) { }
@@ -16,8 +18,9 @@ export class NotebookComponent implements OnInit {
     console.log('Notebook');
 
     this.noteService.getNotes().subscribe(response => {
-      console.log(response);
-    })
+      this.notes = response;
+      console.log(this.notes);
+    });
   }
 
 }
