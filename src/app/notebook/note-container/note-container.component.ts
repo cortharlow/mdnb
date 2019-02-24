@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Note, NoteService } from '../../core/note.service';
 
 @Component({
-  selector: 'notebook-component',
-  templateUrl: './notebook.component.html',
-  styleUrls: ['./notebook.component.scss']
+  selector: 'note-container-component',
+  templateUrl: './note-container.component.html',
+  styleUrls: ['./note-container.component.scss']
 })
 
-export class NotebookComponent implements OnInit {
+export class NoteContainerComponent implements OnInit {
   notes: Note[] = [];
 
   constructor(

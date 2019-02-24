@@ -11,5 +11,4 @@ export class NoteComponent {
   @Input() notes: Note[];
 
   constructor() { }
-
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing/landing-page.component';
-import { NotebookComponent } from './notebook/notebook/notebook.component';
+import { NoteContainerComponent } from './notebook/note-container/note-container.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'notebook',
-    component: NotebookComponent
+    component: NoteContainerComponent
   }
 ];
 

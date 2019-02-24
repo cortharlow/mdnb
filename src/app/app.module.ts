@@ -10,7 +10,7 @@ import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app/app.component';
 import { LandingPageComponent } from './landing/landing-page.component';
-import { NoteComponent, NotebookComponent } from './notebook';
+import { NoteContainerComponent, NoteComponent, NoteFormComponent } from './notebook';
 
 // Angular Material imports
 import {MatCardModule} from '@angular/material/card';
@@ -20,8 +20,9 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     AppComponent,
     LandingPageComponent,
+    NoteContainerComponent,
     NoteComponent,
-    NotebookComponent
+    NoteFormComponent
   ],
   imports: [
     AppRoutingModule,
