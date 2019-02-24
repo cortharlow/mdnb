@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Note } from '../../core/note.service';
+import * as Marked from 'marked';
 
 @Component({
   selector: 'note-component',
@@ -7,8 +8,17 @@ import { Note } from '../../core/note.service';
   styleUrls: ['./note.component.scss']
 })
 
-export class NoteComponent {
-  @Input() notes: Note[];
+export class NoteComponent implements OnInit {
+  @Input() note: Note;
+  markdown: string;
 
   constructor() { }
+
+  ngOnInit() {
+    if (this.note.content !== undefined) {
+        this.markdown = Marked(this.note.content);
+    } else {
+      this.markdown = '';
+    }
+  }
 }

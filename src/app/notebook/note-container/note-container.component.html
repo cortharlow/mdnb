@@ -4,4 +4,6 @@
 
 <p>Notes go here:</p>
 
-<note-component [notes]="notes"></note-component>
+<ng-container *ngFor="let note of notes">
+  <note-component [note]="note"></note-component>
+</ng-container>
