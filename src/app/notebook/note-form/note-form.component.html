@@ -1,1 +1,9 @@
-<p>This will be a form someday I promise.</p>
+<form [formGroup]="newNote" (ngSubmit)="onSubmit()" class="note-form">
+  <mat-form-field>
+    <input matInput placeholder="Title" type="text" formControlName="title">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Content" type="text" formControlName="content"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

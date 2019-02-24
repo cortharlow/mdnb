@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Note } from '../../core/note.service';
 
 @Component({
   selector: 'note-form-component',
@@ -7,5 +9,14 @@ import { Component } from '@angular/core';
 })
 
 export class NoteFormComponent {
+  newNote = new FormGroup({
+    title: new FormControl(''),
+    content: new FormControl(''),
+  });
+
   constructor() { }
+
+  onSubmit() {
+    console.log(this.newNote.value);
+  }
 }

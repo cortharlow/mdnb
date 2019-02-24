@@ -15,8 +15,6 @@ export class NoteContainerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('Notebook');
-
     this.noteService.getNotes().subscribe(response => {
       this.notes = response;
       console.log(this.notes);
