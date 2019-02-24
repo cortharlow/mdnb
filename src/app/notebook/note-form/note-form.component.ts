@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Note } from '../../core/note.service';
+import { Note, NoteService } from '../../core/note.service';
 
 @Component({
   selector: 'note-form-component',
@@ -14,9 +14,13 @@ export class NoteFormComponent {
     content: new FormControl(''),
   });
 
-  constructor() { }
+  constructor(
+    private noteService: NoteService
+  ) { }
 
   onSubmit() {
-    console.log(this.newNote.value);
+    this.noteService.createNote(this.newNote.value).subscribe(response => {
+      console.log(response);
+    });
   }
 }

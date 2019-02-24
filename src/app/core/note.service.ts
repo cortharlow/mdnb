@@ -22,6 +22,10 @@ export class NoteService {
   ) { }
 
   getNotes() {
-    return this.api.get(NoteUrls.getNotes)
+    return this.api.get(NoteUrls.getNotes);
+  }
+
+  createNote(note: Note) {
+    return this.api.post(NoteUrls.createNote, note);
   }
 }
