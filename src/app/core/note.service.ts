@@ -8,10 +8,12 @@ enum NoteUrls {
   createNote = 'notes/create'
 }
 
-export interface Note {
-  title: string;
-  content: string;
-  createdDate: string | Date;
+export class Note {
+  constructor(
+    public title: string,
+    public content: string,
+    public createdDate: string | Date
+  ) {}
 }
 
 @Injectable()

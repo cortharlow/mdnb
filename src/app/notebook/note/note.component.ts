@@ -16,9 +16,13 @@ export class NoteComponent implements OnInit {
 
   ngOnInit() {
     if (this.note.content !== undefined) {
-        this.markdown = Marked(this.note.content);
+        this.markdown = this.translateContentToMarkdown(this.note.content);
     } else {
       this.markdown = '';
     }
+  }
+
+  private translateContentToMarkdown(content: string) {
+    return Marked(content);
   }
 }

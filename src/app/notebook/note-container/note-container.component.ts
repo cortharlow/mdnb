@@ -21,4 +21,7 @@ export class NoteContainerComponent implements OnInit {
     });
   }
 
+  private addNewNote(note: Note) {
+    this.notes.push(note);
+  }
 }
